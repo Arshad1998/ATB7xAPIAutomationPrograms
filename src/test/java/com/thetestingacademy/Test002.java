@@ -16,8 +16,8 @@ public class Test002 {
         RestAssured
                 .given()
                     .baseUri("https://restful-booker.herokuapp.com")
-                    .basePath("/booking/1").log().all()
-                .when()
+                    .basePath("/booking/2").log().all()
+                .when().log().all()
                     .get()
                 .then().log().all()
                     .statusCode(200);
