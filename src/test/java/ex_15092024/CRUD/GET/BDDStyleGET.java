@@ -2,7 +2,7 @@ package ex_15092024.CRUD.GET;
 
 import io.restassured.RestAssured;
 
-public class BDDStyle {
+public class BDDStyleGET {
 
     public static void main(String[] args) {
 
@@ -25,26 +25,25 @@ public class BDDStyle {
         // BDD - Framework different - Gherkin Syntax - (given, when, then)
         // Non BDD and still Gherkin syntax (using classes)
 
-
-        // given ->
-        // URL
-        // HEADER ?, Cookies
-        // base url = https://api.zippopotam.us
-        // basePath = /IN/560037
-        // Auth - Basic, Digest, JWT, Bearer Token, OAuth 2.0 ? = No
-
-
-        // When  ->
-        // PaYLOAD - ? NO/yES - JSON. XML  -> String, Hashmap, Object class
-        // GET Method
+        // given()
+           // URL
+           // HEADER ?, Cookies
+           // base url = https://api.zippopotam.us
+           // basePath = /IN/560037
+           // Auth - Basic, Digest, JWT, Bearer Token, OAuth 2.0 ? = No
 
 
+        // when()
+          // PaYLOAD - ? NO/yES - JSON. XML  -> String, Hashmap, Object class
+          // GET Method
 
-        // Then()
-        // Response Validation
-        //  Status Code
-        //  Response Body
-        //  Time, Headers ,Cookies
+
+
+        // then()
+           // Response Validation
+           //  Status Code
+           //  Response Body
+           //  Time, Headers ,Cookies
 
         System.out.println("Result of Positive TC\n");
         PositiveTest();
