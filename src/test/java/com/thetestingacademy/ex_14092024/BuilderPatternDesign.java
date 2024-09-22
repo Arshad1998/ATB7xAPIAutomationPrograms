@@ -1,4 +1,4 @@
-package com.thetestingacademy;
+package com.thetestingacademy.ex_14092024;
 
 public class BuilderPatternDesign {
 
@@ -6,17 +6,17 @@ public class BuilderPatternDesign {
     // "this" always points to current/calling object. Returning the same to
     // have same reference
 
-    public BuilderPatternDesign Floor1(){
+    public BuilderPatternDesign Floor1() {
         System.out.println("Floor 1");
         return this;
     }
 
-    public BuilderPatternDesign Floor2(String name){
+    public BuilderPatternDesign Floor2(String name) {
         System.out.println(name);
         return this;
     }
 
-    public BuilderPatternDesign Floor3(){
+    public BuilderPatternDesign Floor3() {
         System.out.println("Floor 3");
         return this;
     }
@@ -32,9 +32,7 @@ public class BuilderPatternDesign {
 //If the function are declared as Static we can directly call them using class name - The same happening with RetAssured(Test 002)
 
 
-
     }
-
 
 
 }

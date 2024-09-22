@@ -1,15 +1,16 @@
-package com.thetestingacademy;
+package com.thetestingacademy.ex_14092024;
 
 public class NoDesignPattern {
 
-    public void Step1(){
+    public void Step1() {
         System.out.println("Step 1");
     }
 
-    public void Step2(String name){
+    public void Step2(String name) {
         System.out.println(name);
     }
-    public void Step3(){
+
+    public void Step3() {
         System.out.println("Step 3");
     }
 

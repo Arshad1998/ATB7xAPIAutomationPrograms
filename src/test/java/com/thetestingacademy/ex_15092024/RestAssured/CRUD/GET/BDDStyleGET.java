@@ -1,4 +1,4 @@
-package ex_15092024.CRUD.GET;
+package com.thetestingacademy.ex_15092024.RestAssured.CRUD.GET;
 
 import io.restassured.RestAssured;
 
@@ -26,24 +26,23 @@ public class BDDStyleGET {
         // Non BDD and still Gherkin syntax (using classes)
 
         // given()
-           // URL
-           // HEADER ?, Cookies
-           // base url = https://api.zippopotam.us
-           // basePath = /IN/560037
-           // Auth - Basic, Digest, JWT, Bearer Token, OAuth 2.0 ? = No
+        // URL
+        // HEADER ?, Cookies
+        // base url = https://api.zippopotam.us
+        // basePath = /IN/560037
+        // Auth - Basic, Digest, JWT, Bearer Token, OAuth 2.0 ? = No
 
 
         // when()
-          // PaYLOAD - ? NO/yES - JSON. XML  -> String, Hashmap, Object class
-          // GET Method
-
+        // PaYLOAD - ? NO/yES - JSON. XML  -> String, Hashmap, Object class
+        // GET Method
 
 
         // then()
-           // Response Validation
-           //  Status Code
-           //  Response Body
-           //  Time, Headers ,Cookies
+        // Response Validation
+        //  Status Code
+        //  Response Body
+        //  Time, Headers ,Cookies
 
         System.out.println("Result of Positive TC\n");
         PositiveTest();

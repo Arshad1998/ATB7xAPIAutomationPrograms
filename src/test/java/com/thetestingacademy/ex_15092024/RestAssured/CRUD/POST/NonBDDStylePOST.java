@@ -1,4 +1,4 @@
-package ex_15092024.CRUD.POST;
+package com.thetestingacademy.ex_15092024.RestAssured.CRUD.POST;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -21,17 +21,17 @@ public class NonBDDStylePOST {
                 "    }";
 
         RequestSpecification request = RestAssured.given();
-                request.baseUri("https://restful-booker.herokuapp.com");
-                request.basePath("/auth");
-                request.contentType(ContentType.JSON);
-                request.body(Payload);
+        request.baseUri("https://restful-booker.herokuapp.com");
+        request.basePath("/auth");
+        request.contentType(ContentType.JSON);
+        request.body(Payload);
 //                request.log().all();
 
 
         Response response = request.when().post();
 
         ValidatableResponse validation = response.then();
-                validation.log().all();
-                validation.statusCode(200);
+        validation.log().all();
+        validation.statusCode(200);
     }
 }

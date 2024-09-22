@@ -1,4 +1,4 @@
-package ex_15092024.CRUD.POST;
+package com.thetestingacademy.ex_15092024.RestAssured.CRUD.POST;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -18,7 +18,6 @@ public class BDDStylePOST {
     // HEADER - Content Type -> application/json
 
 
-
     public static void main(String[] args) {
 
 //How Payload is given in Rest Assured
@@ -33,15 +32,15 @@ public class BDDStylePOST {
 
         RestAssured
                 .given()
-                    .baseUri("https://restful-booker.herokuapp.com")
-                    .basePath("/auth")
-                    .contentType(ContentType.JSON)
-                    .body(Payload)
+                .baseUri("https://restful-booker.herokuapp.com")
+                .basePath("/auth")
+                .contentType(ContentType.JSON)
+                .body(Payload)
                 .when()
-                    .log().all()
-                    .post()
+                .log().all()
+                .post()
                 .then()
-                    .log().all()
-                    .statusCode(200);
+                .log().all()
+                .statusCode(200);
     }
 }

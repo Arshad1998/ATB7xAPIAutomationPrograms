@@ -1,8 +1,8 @@
-package com.thetestingacademy;
+package com.thetestingacademy.ex_14092024;
 
 import io.restassured.RestAssured;
 
-public class Test002 {
+public class TEST002 {
     public static void main(String[] args) {
         System.out.println("Rest Assured Test CASE");
         System.out.println("GET Request Demo");
@@ -15,15 +15,12 @@ public class Test002 {
 
         RestAssured
                 .given()
-                    .baseUri("https://restful-booker.herokuapp.com")
-                    .basePath("/booking/2").log().all()
+                .baseUri("https://restful-booker.herokuapp.com")
+                .basePath("/booking/2").log().all()
                 .when().log().all()
-                    .get()
+                .get()
                 .then().log().all()
-                    .statusCode(200);
-
-
-
+                .statusCode(200);
 
 
     }
