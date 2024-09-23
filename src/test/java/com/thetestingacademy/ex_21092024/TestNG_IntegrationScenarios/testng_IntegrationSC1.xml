@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="ATB7xAPIAutomationPrograms">
+        <classes>
+            <class name="com.thetestingacademy.ex_21092024.TestNG_IntegrationScenarios.IntegrationSC1">
+                <methods>
+                    <include name="test_PUTReq_UpdateBookingId"> </include>
+                    <include name="test_Verify_UpdatedBookingID"> </include>
+                    <include name="test_Delete_UpdatedBookingId"> </include>
+                    <include name="test_Verify_If_UpdatedBookingID_Is_Deleted"> </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

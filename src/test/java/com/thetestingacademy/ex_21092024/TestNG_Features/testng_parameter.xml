@@ -2,8 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="ATB7xAPIAutomationPrograms">
+        <parameter name="browser1" value="Chrome"></parameter>
+        <parameter name="browser2" value="FireFox"></parameter>
         <classes>
-            <class name="com.thetestingacademy.ex_15092024.RestAssured.CRUD.PUT.NonBDDPUT">
+            <class name="com.thetestingacademy.ex_21092024.TestNG_Features.Feature6">
             </class>
         </classes>
     </test>

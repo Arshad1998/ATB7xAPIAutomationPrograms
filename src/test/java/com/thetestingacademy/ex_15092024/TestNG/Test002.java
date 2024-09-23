@@ -25,6 +25,7 @@ public class Test002 {
     void demo4(){
         System.out.println("Test");
     }
+    
     @AfterMethod
     void demo9(){
         System.out.println("After Method");
