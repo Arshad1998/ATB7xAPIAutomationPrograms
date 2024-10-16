@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_22092024.PayloadHandling.GSONSerialization.HashMap;
+package com.thetestingacademy.ex_22092024.PayloadHandling.GSONSerializationDeserialization.HashMap;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

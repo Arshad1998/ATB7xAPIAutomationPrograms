@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_22092024.PayloadHandling.GSONSerialization.POJOClass;
+package com.thetestingacademy.ex_22092024.PayloadHandling.GSONSerializationDeserialization.POJOClass;
 
 
 import io.qameta.allure.Description;
@@ -9,6 +9,7 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 import com.google.gson.Gson;
+import static org.assertj.core.api.Assertions.*;
 
 public class PayloadTest03 {
 
@@ -55,12 +56,9 @@ public void test_PayloadViaPOJOClass(){
 //    System.out.println(booking.getBookingdates());
 //  Above both will print the object in 2 string type
 
-//  To convert the data to String for server we use GSON to achieve serialization
-
-
+//  Serialization - To convert the JAVA object to String for server we use GSON
     Gson gson = new Gson();
     String JsonStringPayload = gson.toJson(booking);
-
 //    System.out.println(JsonStringPayload);
 
     RequestSpecification request = RestAssured.given();
@@ -72,9 +70,21 @@ public void test_PayloadViaPOJOClass(){
 
     Response response = request.when().post();
 
+    String ResponseString = response.asString();
+    System.out.println(ResponseString);
+
     ValidatableResponse validation = response.then();
     validation.log().all();
     validation.statusCode(200);
+
+    //DeSerialization - Converting the String back to JSON Object
+    //Below code will convert the response which received as a String to object and map it with Booking Response class created
+
+    BookingResponse bookingresponse = gson.fromJson(ResponseString,BookingResponse.class);
+    System.out.println("Booking id generated is " + bookingresponse.getBookingid());
+    System.out.println("First Name of the Booking generated is " + bookingresponse.getBooking().getFirstName());
+
+    assertThat(bookingresponse.getBooking().getFirstName()).isEqualTo("Mohamed");
 
 
     }
