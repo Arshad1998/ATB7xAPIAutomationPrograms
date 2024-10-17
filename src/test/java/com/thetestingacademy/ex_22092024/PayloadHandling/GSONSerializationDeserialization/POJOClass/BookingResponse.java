@@ -1,5 +1,6 @@
 package com.thetestingacademy.ex_22092024.PayloadHandling.GSONSerializationDeserialization.POJOClass;
 
+
 public class BookingResponse {
     private String bookingid;
     private Booking booking;

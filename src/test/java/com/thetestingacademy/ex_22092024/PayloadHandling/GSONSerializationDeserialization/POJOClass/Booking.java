@@ -14,6 +14,8 @@ public class Booking {
 //                "additionalneeds" : "Breakfast"
 //            }
 
+
+
     private String firstname;
     private String lastname;
     private Integer totalprice;
